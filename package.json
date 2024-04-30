@@ -24,6 +24,7 @@
     "@supabase/auth-helpers-nextjs": "^0.10.0",
     "@supabase/supabase-js": "^2.42.4",
     "@tanstack/react-query": "^5.29.2",
+    "axios": "^1.6.8",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "lucide-react": "^0.368.0",
@@ -39,7 +40,8 @@
     "swr": "^2.2.5",
     "tailwind-merge": "^2.2.2",
     "tailwindcss-animate": "^1.0.7",
-    "useritem": "^0.1.41"
+    "useritem": "^0.1.41",
+    "xml2js": "^0.6.2"
   },
   "devDependencies": {
     "@types/node": "^20",

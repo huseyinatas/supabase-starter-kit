@@ -15,8 +15,8 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "Parax",
-  description: "Trusted safety and security solutions for your business.",
+  title: "DASKLA",
+  description: "",
 };
 
 export default function RootLayout({

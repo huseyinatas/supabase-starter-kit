@@ -8,19 +8,22 @@ export async function middleware(req: NextRequest) {
 
   const {
     data: { session },
+    error,
   } = await supabase.auth.getSession();
-  const { error } = await supabase.auth.getSession();
+
   if (error) {
     await supabase.auth.signOut();
-    return NextResponse.rewrite(new URL("/auth/login", req.url));
+    return NextResponse.rewrite(new URL("/auth/login", req.nextUrl.origin));
   }
   if (!session) {
-    return NextResponse.rewrite(new URL("/auth/login", req.url));
+    return NextResponse.rewrite(new URL("/auth/login", req.nextUrl.origin));
   }
 
   return res;
 }
 
 export const config = {
-  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
+  matcher: [
+    "/((?!api|_next/static|_next/image|favicon.ico|callback/[^/]+/?$|offers/[^/]+/?$).*)",
+  ],
 };

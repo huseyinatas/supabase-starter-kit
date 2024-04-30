@@ -6,8 +6,8 @@ import { cookies } from "next/headers";
 import { createRouteHandlerClient } from "@supabase/auth-helpers-nextjs";
 import type { Database } from "@/lib/database.types";
 import { redirect } from "next/navigation";
-
-export default async function Login() {
+import Logo from "../../../../public/logo.svg";
+export default async function Page() {
   const cookieStore = cookies();
   const supabase = createRouteHandlerClient<Database>({
     cookies: () => cookieStore,
@@ -29,7 +29,7 @@ export default async function Login() {
       >
         <Image
           className="mb-3"
-          src="/logo.png"
+          src={Logo}
           width={130}
           height={40}
           alt={"logo"}

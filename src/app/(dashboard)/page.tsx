@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/breadcrumb";
 import React from "react";
 
-export default function Home() {
+export default function Page() {
   return (
     <main>
       <Breadcrumb className="hidden md:flex mt-5">

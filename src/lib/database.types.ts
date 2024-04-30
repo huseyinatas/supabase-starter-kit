@@ -9,6 +9,57 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
+      offers: {
+        Row: {
+          address: string | null;
+          created_at: string;
+          daskPoliceNo: string | null;
+          definitions: Json | null;
+          end_date: string | null;
+          guarantee: string | null;
+          id: string;
+          name_surname: string | null;
+          order_token: string | null;
+          paid_amount: string | null;
+          policeNo: string | null;
+          policy_number: string | null;
+          start_date: string | null;
+          status: string | null;
+        };
+        Insert: {
+          address?: string | null;
+          created_at?: string;
+          daskPoliceNo?: string | null;
+          definitions?: Json | null;
+          end_date?: string | null;
+          guarantee?: string | null;
+          id?: string;
+          name_surname?: string | null;
+          order_token?: string | null;
+          paid_amount?: string | null;
+          policeNo?: string | null;
+          policy_number?: string | null;
+          start_date?: string | null;
+          status?: string | null;
+        };
+        Update: {
+          address?: string | null;
+          created_at?: string;
+          daskPoliceNo?: string | null;
+          definitions?: Json | null;
+          end_date?: string | null;
+          guarantee?: string | null;
+          id?: string;
+          name_surname?: string | null;
+          order_token?: string | null;
+          paid_amount?: string | null;
+          policeNo?: string | null;
+          policy_number?: string | null;
+          start_date?: string | null;
+          status?: string | null;
+        };
+        Relationships: [];
+      };
       organizations: {
         Row: {
           created_at: string | null;
@@ -140,10 +191,24 @@ export type Database = {
             referencedColumns: ["id"];
           },
           {
+            foreignKeyName: "public_profiles_id_fkey";
+            columns: ["id"];
+            isOneToOne: true;
+            referencedRelation: "users";
+            referencedColumns: ["id"];
+          },
+          {
             foreignKeyName: "public_profiles_organization_fkey";
             columns: ["organization"];
             isOneToOne: false;
             referencedRelation: "organizations";
+            referencedColumns: ["id"];
+          },
+          {
+            foreignKeyName: "public_profiles_role_fkey";
+            columns: ["role"];
+            isOneToOne: false;
+            referencedRelation: "roles";
             referencedColumns: ["id"];
           },
           {

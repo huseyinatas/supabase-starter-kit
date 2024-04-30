@@ -52,14 +52,14 @@ export default function Sidebar() {
               <div className="flex-grow border-t border-gray-300"></div>
             </div>
             <Link
-              href="#"
-              className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
+              href="/offers"
+              className={`flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary ${pathname === "/offers" ? "bg-muted text-primary" : ""}`}
             >
               <Package className="h-4 w-4" />
               Teklifler{" "}
             </Link>
             <Link
-              href="#"
+              href="/policies"
               className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
             >
               <FileText className="h-4 w-4" />
