@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { supabaseAdmin } from "@/utils/supabase";
+import { redirect } from "next/navigation";
 export async function POST(
   request: Request,
   { params }: { params: { slug: string } },
@@ -32,11 +33,7 @@ export async function POST(
 
     if (updateEror) return NextResponse.json({ error }, { status: 400 });
 
-    return NextResponse.redirect(
-      "https://devneolife.com/offers/success/" + params.slug,
-    );
+    return redirect("https://devneolife.com/offers/success/" + params.slug);
   }
-  return NextResponse.redirect(
-    "https://devneolife.com/offers/fail/" + params.slug,
-  );
+  return redirect("https://devneolife.com/offers/fail/" + params.slug);
 }
