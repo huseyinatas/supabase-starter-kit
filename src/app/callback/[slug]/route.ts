@@ -32,11 +32,7 @@ export async function POST(
 
     if (updateEror) return NextResponse.json({ error }, { status: 400 });
 
-    return NextResponse.redirect(
-      new URL("/offers/success/" + params.slug, request.url),
-    );
+    return NextResponse.redirect("/offers/success/" + params.slug);
   }
-  return NextResponse.redirect(
-    new URL("/offers/fail/" + params.slug, request.url),
-  );
+  return NextResponse.redirect("/offers/fail/" + params.slug);
 }
