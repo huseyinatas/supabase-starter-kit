@@ -181,12 +181,8 @@ T
 $src/app/api/uavt/il-sorgula/route.ts,7/0/705fa462f50608969bafec7eeac55edbbce33313
 S
 #src/app/(dashboard)/offers/page.tsx,1/3/13dd27c13db07b681de66b8d824172adedffc979
-Y
-)src/app/(dashboard)/offers/Navigation.tsx,3/4/347dcef9853bba9f8bc7960c3f5bfd4564c76696
 g
 7src/app/(dashboard)/offers/create/create-offer-form.tsx,2/4/244220d6272b9843d70933e21a0b37f6571557fd
-V
-&src/app/api/uavt/ilce-sorgula/route.ts,2/a/2aeaaa33b8a72871d1497c8fd246d8b6a6519b4f
 [
 +src/app/api/uavt/bucak-koy-sorgula/route.ts,0/1/01b19f4027a6decac33dfe15379a64e04a12ab09
 Y
@@ -207,12 +203,6 @@ X
 (src/app/api/dask/odeme-yap/[id]/route.ts,b/f/bfaf6d9075175033096f0ab51a374341707e1c80
 C
 src/utils/kkHash.ts,1/4/14d2bc9f3e50ba951db5fcb6716023611f6c8fc1
-R
-"src/app/api/offers/delete/route.ts,3/5/357cdcd2ee7b8e8a3f32aac626f0ef7664ae3e86
-R
-"src/app/api/offers/[slug]/route.ts,6/4/647c2204c80f281aca71e4977f1ed3f59f42f804
-\
-,src/app/(dashboard)/offers/callback/route.ts,5/2/52f3d0a1f6b854bd20d59499977cda168a29ab8e
 P
  src/app/callback/[slug]/route.ts,5/7/57ee7f62ca96ac4ca45f98de08b36abe954ef24f
 b
@@ -533,3 +523,5 @@ w
 G.idea/sonarlint/issuestore/b/6/b64d1893e69ac0511cda386a979ec589465b7fe7,2/d/2d311d95f189cb6f807a04b0ec0cf007443e642b
 Å
 Q.idea/sonarlint/securityhotspotstore/5/8/58220e035abb30994edb64d06160ea51070dd706,d/e/de105937b6f1317f42a096c691f2a1b934c49f04
+K
+src/app/(dashboard)/nav.tsx,d/4/d4513b9e8754747c621360f0046452c86494e279

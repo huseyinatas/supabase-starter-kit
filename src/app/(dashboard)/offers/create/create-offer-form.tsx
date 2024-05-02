@@ -350,9 +350,11 @@ export default function CreateOfferForm() {
               </div>
             </CardContent>
             <CardFooter>
-              <Link href="/offers" className="w-full">
-                <Check className="mr-2 h-4 w-4" /> Teklifleri Görüntüle
-              </Link>
+              <Button>
+                <Link href="/offers" className="w-full flex items-center">
+                  <Check className="mr-2 h-4 w-4" /> Teklifleri Görüntüle
+                </Link>
+              </Button>
             </CardFooter>
           </Card>
         </>
