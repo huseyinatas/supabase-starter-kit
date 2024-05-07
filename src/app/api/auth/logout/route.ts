@@ -14,7 +14,7 @@ export async function POST(request: Request) {
 
   await supabase.auth.signOut();
 
-  return NextResponse.redirect(`${requestUrl.origin}`, {
+  return NextResponse.redirect(`https://panel.daskla.com`, {
     status: 301,
   });
 }
