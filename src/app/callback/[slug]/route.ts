@@ -33,7 +33,7 @@ export async function POST(
 
     if (updateEror) return NextResponse.json({ error }, { status: 400 });
 
-    return redirect("https://devneolife.com/offers/success/" + params.slug);
+    return redirect("https://panel.daskla.com/offers/success/" + params.slug);
   }
-  return redirect("https://devneolife.com/offers/fail/" + params.slug);
+  return redirect("https://panel.daskla.com/offers/fail/" + params.slug);
 }
