@@ -525,3 +525,5 @@ G.idea/sonarlint/issuestore/b/6/b64d1893e69ac0511cda386a979ec589465b7fe7,2/d/2d
 Q.idea/sonarlint/securityhotspotstore/5/8/58220e035abb30994edb64d06160ea51070dd706,d/e/de105937b6f1317f42a096c691f2a1b934c49f04
 K
 src/app/(dashboard)/nav.tsx,d/4/d4513b9e8754747c621360f0046452c86494e279
+P
+ src/app/api/auth/logout/route.ts,c/5/c51066a8c5cac243f6475c72fe79df0781080297

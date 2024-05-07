@@ -153,8 +153,20 @@ export async function POST(request: Request) {
       sigortaliKati,
       sigortaEttirenSifati,
     },
+    team: null,
   };
-
+  const { data: profile, error: profileError } = (await supabase
+    .from("profiles")
+    .select("*, role(*)")
+    .eq("id", session.user.id)
+    .single()) as any;
+  if (
+    profile?.role.name === "team-admin" ||
+    profile?.role.name === "user" ||
+    profile?.role.name === "user-viewing"
+  ) {
+    insertData.team = profile.team;
+  }
   const { data, error } = await supabase
     .from("offers")
     .insert(insertData)

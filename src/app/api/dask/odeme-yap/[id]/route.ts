@@ -52,7 +52,10 @@ export async function POST(
   const month = dateObject.getMonth() + 1;
   const year = dateObject.getFullYear();
   const formattedDate = `${day}/${month}/${year}`;
-  const hashedCardNumber = await kkHash(cardNumber, "zVFU9lJOMGxgbBfz");
+  const hashedCardNumber = await kkHash(
+    cardNumber.replace(/\s/g, ""),
+    "zVFU9lJOMGxgbBfz",
+  );
   const parser = new xml2js.Parser();
   const username = "sigortamweb";
   const password = "JhH0R90FISVinyQHThkXzmp_e";

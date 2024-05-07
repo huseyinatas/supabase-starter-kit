@@ -85,12 +85,17 @@ export default async function RootLayout({
                 <Link href={"/profile"}>Profil & Güvenlik</Link>
               </DropdownMenuItem>
               <DropdownMenuSeparator />
-              <DropdownMenuItem>Çıkış Yap</DropdownMenuItem>
+              <DropdownMenuItem>
+                <form method="post" action="/api/auth/logout">
+                  <button type="submit">Çıkış Yap</button>
+                </form>
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </header>
         <main className="grid items-start max-h-screen gap-4 p-4 sm:px-6 sm:py-0 md:gap-8 !pb-24 overflow-auto pt-6">
-          {factor.data?.totp?.length === 0 && (
+          {/*
+            {factor.data?.totp?.length === 0 && (
             <Alert className="mt-6" variant="destructive">
               <ExclamationTriangleIcon className="h-4 w-4" />
               <AlertTitle>
@@ -103,6 +108,7 @@ export default async function RootLayout({
               </AlertDescription>
             </Alert>
           )}
+             */}
           {children}
         </main>
       </div>

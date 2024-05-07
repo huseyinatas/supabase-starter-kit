@@ -20,15 +20,25 @@ export async function GET(request: Request) {
 
   if (!session)
     return NextResponse.json({ error: "No session" }, { status: 401 });
-
-  const { data, error, count } = await supabase
+  const { data: profile, error: profileError } = (await supabase
+    .from("profiles")
+    .select("*, role(*)")
+    .eq("id", session.user.id)
+    .single()) as any;
+  const offersData = supabase
     .from("offers")
     .select("*", { count: "exact" })
     .range((page - 1) * items, page * items - 1)
     .limit(items)
-    .eq("status", "pending")
-    .neq("id", session.user.id);
-
+    .eq("status", "pending");
+  if (
+    profile?.role.name === "team-admin" ||
+    profile?.role.name === "user" ||
+    profile?.role.name === "user-viewing"
+  ) {
+    offersData.eq("team", profile.team);
+  }
+  const { data, error, count } = await offersData;
   if (error) return NextResponse.json({ error }, { status: 400 });
 
   return NextResponse.json(

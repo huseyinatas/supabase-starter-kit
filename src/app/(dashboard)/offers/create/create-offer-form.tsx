@@ -90,7 +90,6 @@ export default function CreateOfferForm() {
       body: JSON.stringify(data),
     });
     const res = await req.json();
-    console.log(res?.data);
     if (res?.data?.errorCode[0] != "00") {
       alert(res?.data?.errorMessage);
       toast.error("Hata", {
@@ -932,7 +931,9 @@ export default function CreateOfferForm() {
                   type="submit"
                 >
                   <FormattedMessage
-                    defaultMessage="Teklif Oluştur"
+                    defaultMessage={
+                      isSubmitting ? "Lütfen bekleyin..." : "Teklif Oluştur"
+                    }
                     id="Auth / Add Two-factor / Verify & Activate button"
                   />
                 </Button>
